@@ -10,7 +10,9 @@ def main():
     print("- Simplificar Gramaticas -")
 
     # Captura o texto do caminho inserido pelo usuário e o transforma em uma matriz
-    matrix = files_handling.capture_matrix() 
+    matrix = files_handling.capture_matrix()
+    if matrix == None:
+        pass
     print("Gramática Capturada: ")
     print("\n")
     for i in matrix:
