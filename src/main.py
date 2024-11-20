@@ -22,6 +22,10 @@ def main():
     # Remover produções vazias
     print("Removendo producoes vazias...")
     without_lambda = remove_lambda.remove_lambda(matrix)
+    print("\n")
+    for i in without_lambda:
+        print(i)
+    print("\n")
 
     # Remover produções Unitárias
     print("Removendo producoes unitarias...")
@@ -31,7 +35,7 @@ def main():
     print("Removendo producoes inuteis...")
     without_useless = remove_useless.remove_useless(without_unitary)
 
-    # Salvar arquivo em formato com o de entrada
+    # Salvar arquivo em formato como de entrada
     files_handling.save_file(without_useless)
     
 

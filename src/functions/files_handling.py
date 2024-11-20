@@ -12,11 +12,6 @@ def validate_grammar(matrix):
         print("Erro: O símbolo inicial não está listado entre as variáveis.")
         return False
 
-    for rule in matrix[2:]:
-        if "->" not in rule:
-            print(f"Erro: A regra {rule} não contém o símbolo '->'.")
-            return False
-
     return True
 
 def capture_matrix():
