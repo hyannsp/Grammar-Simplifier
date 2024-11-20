@@ -65,4 +65,4 @@ A -> a
     cd Grammar-Simplifier
     ```
 2. Certifique-se de que tem o Python instalado em sua máquina.
-3. Execute o programa passando o arquivo de entrada e o caminho para o arquivo de saída quando necessário (opte sempre por inseri-los nas pastas input e output):
+3. Execute o programa passando o arquivo de entrada e o nome para o arquivo de saída quando necessário (opte sempre por inseri-los nas pastas input e output):
