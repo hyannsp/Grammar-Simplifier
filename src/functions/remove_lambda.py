@@ -24,6 +24,9 @@ def remove_lambda(matrix):
                     nullable.add(prod[0])
                     changed = True
 
+    if not nullable:
+        print("Não encontradas produções vazias!")
+        return matrix
     print("Variáveis anuláveis: ", nullable)
 
     """

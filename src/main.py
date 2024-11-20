@@ -30,13 +30,17 @@ def main():
     # Remover produções Unitárias
     print("Removendo producoes unitarias...")
     without_unitary = remove_unitary.remove_unitary(without_lambda)
-
+    print("\n")
+    for i in without_unitary:
+        print(i)
+    print("\n")
+    
     # Remover produções Inúteis
     print("Removendo producoes inuteis...")
     without_useless = remove_useless.remove_useless(without_unitary)
 
     # Salvar arquivo em formato como de entrada
-    files_handling.save_file(without_useless)
+    #files_handling.save_file(without_useless)
     
 
     return
