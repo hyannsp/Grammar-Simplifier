@@ -22,17 +22,17 @@ O arquivo de entrada deve seguir o seguinte formato:
     Exemplo: `S A B C D`
 2. **Linha 2:** Símbolo inicial  
     Exemplo: `S`
-3. **Linhas 3 em diante:** Regras de produção no formato `variável -> símbolos`  
+3. **Linhas 3 em diante:** Regras de produção no formato `variável símbolos`  
     - Símbolos são variáveis ou terminais.  
     - `h` representa a palavra vazia.  
     Exemplo:  
     ```text
-    S -> a
-    S -> Aa
-    A -> a
-    A -> Aa
-    A -> B
-    B -> h
+    S a
+    S Aa
+    A a
+    A Aa
+    A B
+    B h
     ```
 ### Arquivo de Saída
 O arquivo de saída deve manter o mesmo formato do arquivo de entrada, mas com a gramática já simplificada. Exemplo:
@@ -41,21 +41,21 @@ O arquivo de saída deve manter o mesmo formato do arquivo de entrada, mas com a
 ```text
 S A B C D
 S
-S -> a
-S -> Aa
-A -> a
-A -> Aa
-A -> B
-B -> h
+S a
+S Aa
+A a
+A Aa
+A B
+B h
 ```
 
 **Saída (Gramática Limpa):**
 ```text
 S A
 S
-S -> a
-S -> Aa
-A -> a
+S a
+S Aa
+A a
 ```
 
 ## 🚀 Como Usar
