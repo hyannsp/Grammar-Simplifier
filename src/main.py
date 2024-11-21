@@ -13,8 +13,8 @@ def main():
     matrix = files_handling.capture_matrix()
     if matrix == None:
         pass
-    print("Gramática Capturada: ")
     print("\n")
+    print("Gramática Capturada: ")
     for i in matrix:
         print(i)
     print("\n")
@@ -23,6 +23,7 @@ def main():
     print("Removendo producoes vazias...")
     without_lambda = remove_lambda.remove_lambda(matrix)
     print("\n")
+    print("\nSem produções Vazias")
     for i in without_lambda:
         print(i)
     print("\n")
@@ -31,13 +32,18 @@ def main():
     print("Removendo producoes unitarias...")
     without_unitary = remove_unitary.remove_unitary(without_lambda)
     print("\n")
+    print("\nSem produções Unitárias")
     for i in without_unitary:
         print(i)
     print("\n")
-    
+
     # Remover produções Inúteis
     print("Removendo producoes inuteis...")
     without_useless = remove_useless.remove_useless(without_unitary)
+    print("\nSem produções Inúteis")
+    for i in without_useless:
+        print(i)
+    print("\n")
 
     # Salvar arquivo em formato como de entrada
     #files_handling.save_file(without_useless)
