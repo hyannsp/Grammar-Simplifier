@@ -3,7 +3,7 @@ def remove_unitary(matrix):
     start_symbol = matrix[1][0]  # Símbolo inicial
     productions = matrix[2:]  # Produções
 
-    new_production = []
+    new_productions = []
     """
         1. Encontrar os pares Unidade
     """
@@ -14,7 +14,7 @@ def remove_unitary(matrix):
             #print(f"Par unidade em: {prod}")
             unitary_pairs.add(tuple(prod))
             continue
-        new_production.append(prod) # Salvar os não pares unitários para o passo 2
+        new_productions.append(prod) # Salvar os não pares unitários para o passo 2
 
     # Adicionando pares unidade por indução
     iterator = unitary_pairs.copy() # necessário para mudar o set original
@@ -28,18 +28,18 @@ def remove_unitary(matrix):
 
     """
         2. Adicionar à nova produção os pares não unitários
-        ( já feito durante a iteração para encontrar os pares unitários, salvo em new_production)
+        ( já feito durante a iteração para encontrar os pares unitários, salvo em new_productions)
 
         3. Introduzir as derivações que substituem os pares unidade
     """
-    iterator = new_production.copy() # necessário para mudar o set original
+    iterator = new_productions.copy() # necessário para mudar o set original
     for x, y in unitary_pairs:
         for a, b in iterator:
             # Caso S->A e A->bb , logo S->bb
-            if y == a and [x , b] not in new_production:
-                new_production.append([x, b])
+            if y == a and [x , b] not in new_productions:
+                new_productions.append([x, b])
 
     """
         4: Retornar nova gramática
     """
-    return [variables, [start_symbol]] + new_production
+    return [variables, [start_symbol]] + new_productions
