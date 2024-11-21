@@ -51,7 +51,7 @@ B h
 
 **Saída (Gramática Limpa):**
 ```text
-S A
+S A B C D
 S
 S a
 S Aa

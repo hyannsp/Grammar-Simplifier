@@ -46,9 +46,8 @@ def main():
     print("\n")
 
     # Salvar arquivo em formato como de entrada
-    #files_handling.save_file(without_useless)
+    files_handling.save_file(without_useless)
     
-
     return
 
 if __name__ == "__main__":
